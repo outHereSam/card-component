@@ -12,10 +12,17 @@ button {
 
 body {
   background-color: #fafcff;
-  height: 100vh;
+  height: 100%;
   display: flex;
+  padding: 60px 0;
   justify-content: center;
-  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0 auto;
 }
 
 .card {
@@ -78,6 +85,53 @@ body {
 
 .buy:hover {
   background-color: #454545;
+}
+
+/* Profile Card Styles */
+.profile-card {
+  position: relative;
+  height: 350px;
+  background-position-y: -80px;
+}
+.profile-card .details {
+  width: 100%;
+  height: 60%;
+}
+
+.profile-card .avatar {
+  width: 138px;
+  height: 138px;
+  border: solid 6px white;
+  border-radius: 50%;
+  background-image: url("./assets/profile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+}
+
+.profile-card .details {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-card .details .headline {
+  margin: 70px 0 0 0;
+}
+
+.profile-card .details .email {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0 10px 0;
+  color: rgb(171, 216, 255);
 }
 
 @media only screen and (max-width: 418px) {
